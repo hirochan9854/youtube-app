@@ -30,7 +30,23 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <div className="bg-gray-100 min-h-screen p-6">
+      <div className="bg-gray-100 min-h-screen p-6 pb-16">
+        <div className="mb-3">
+          <h2 className="text-2xl font-normal mb-6 text-left">人気ドラマ</h2>
+          <div className="flex items-stretch overflow-x-auto">
+            {popularDrama.map((playlist) => (
+              <PlaylistCard key={playlist.id.playlistId} playlist={playlist} />
+            ))}
+          </div>
+        </div>
+        <div className="mb-3">
+          <h2 className="text-2xl font-normal mb-6 text-left">人気アニメ</h2>
+          <div className="flex items-stretch overflow-x-auto">
+            {popularAnime.map((playlist) => (
+              <PlaylistCard key={playlist.id.playlistId} playlist={playlist} />
+            ))}
+          </div>
+        </div>
         {Object.keys(playlists).map((genre) => (
           <div key={genre} className="mb-3">
             <h2 className="text-2xl font-normal mb-4 text-left">{genre}</h2>
@@ -44,22 +60,6 @@ const Home = () => {
             </div>
           </div>
         ))}
-        <div className="mb-3">
-          <h2 className="text-3xl font-normal mb-6 text-left">人気ドラマ</h2>
-          <div className="flex items-stretch overflow-x-auto">
-            {popularDrama.map((playlist) => (
-              <PlaylistCard key={playlist.id.playlistId} playlist={playlist} />
-            ))}
-          </div>
-        </div>
-        <div className="mb-3">
-          <h2 className="text-3xl font-normal mb-6 text-left">人気アニメ</h2>
-          <div className="flex items-stretch overflow-x-auto">
-            {popularAnime.map((playlist) => (
-              <PlaylistCard key={playlist.id.playlistId} playlist={playlist} />
-            ))}
-          </div>
-        </div>
       </div>
       <Footer />
     </div>

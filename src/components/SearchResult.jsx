@@ -14,7 +14,11 @@ const SearchResult = ({ query }) => {
     <div className="overflow-scroll h-[calc(100vh-270px)]">
       {playlists.length > 0 ? (
         playlists.map((playlist) => (
-          <PlaylistCard key={playlist.id.playlistId} playlist={playlist} />
+          <PlaylistCard
+            width={true}
+            key={playlist.id.playlistId}
+            playlist={playlist}
+          />
         ))
       ) : (
         <p>検索結果がありません。</p>
