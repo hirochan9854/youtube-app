@@ -1,13 +1,13 @@
 import PropsTypes from "prop-types";
 
-const PlaylistCard = ({ playlist, width }) => {
+const PlaylistCard = ({ playlist }) => {
   const playlistUrl = `https://www.youtube.com/playlist?list=${playlist.id.playlistId}`;
 
   return (
-    <div className={`bg-white p-4 rounded shadow ${width ? "w-full" : "w-64"}`}>
+    <div className="bg-white p-4 rounded shadow w-64">
       <a href={playlistUrl} target="_blank" rel="noopener noreferrer">
         <img
-          className="w-full"
+          className="min-w-44"
           src={playlist.snippet.thumbnails.medium.url}
           alt={playlist.snippet.title}
         />
