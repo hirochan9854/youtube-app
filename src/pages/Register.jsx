@@ -37,13 +37,16 @@ export default function Register() {
     <div className="h-screen">
       <Start isOpen={isOpen} onClose={onClose} />
       <Header />
-      <div className="p-9 mt-52">
+      <div className="p-9 mt-30">
         <h2 className="text-center text-lg mb-10">
           興味のあるジャンル（複数可）
         </h2>
         <form>
           {genres.map((genre) => (
-            <label key={genre} className="mr-4 inline-block">
+            <label
+              key={genre}
+              className="mr-4 mb-4 inline-block p-2 bg-slate-200 rounded"
+            >
               <input
                 type="checkbox"
                 value={genre}
@@ -59,7 +62,7 @@ export default function Register() {
         </form>
         {error && <p className="text-center text-red-500 mt-4">{error}</p>}
         <button
-          className="block mx-auto bg-gray-200 p-4 rounded mt-9"
+          className="block mx-auto bg-slate-200 p-4 rounded mt-9"
           onClick={handleNavigate}
         >
           次へ

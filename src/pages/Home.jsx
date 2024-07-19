@@ -33,7 +33,7 @@ const Home = () => {
       <div className="bg-gray-100 min-h-screen p-6">
         {Object.keys(playlists).map((genre) => (
           <div key={genre} className="mb-3">
-            <h2 className="text-3xl font-normal mb-6 text-left">{genre}</h2>
+            <h2 className="text-2xl font-normal mb-4 text-left">{genre}</h2>
             <div className="flex items-stretch overflow-x-auto">
               {playlists[genre].map((playlist) => (
                 <PlaylistCard

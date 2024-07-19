@@ -15,7 +15,7 @@ const useFetchPlaylists = (searchQuery) => {
               q: searchQuery,
               type: "playlist",
               maxResults: 10,
-              key: "AIzaSyAYYnASIlMMkFKmy1ol1fRQfvmurQ-xBoU",
+              key: "AIzaSyBBQ0KbPhmc6a_TYM5ka-kcP5iuhjF4s9o",
             },
           }
         );
